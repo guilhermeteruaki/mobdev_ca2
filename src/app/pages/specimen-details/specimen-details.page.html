@@ -1,9 +1,34 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>specimen-details</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" defaultHref="/tabs/(films:films)">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ species?.name }}</ion-title>
+    
+    <ion-buttons slot="end">
+      <ion-button (click)="unfavoriteFilm()" *ngIf="isFavorite">
+        <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
+      </ion-button>
+      <ion-button (click)="favoriteFilm()" *ngIf="!isFavorite">
+        <ion-icon name="star-outline" slot="icon-only" color="secondary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding="">
+ 
+  <ion-card *ngIf="species" class="movie-card">
+    <ion-card-header>Specie Name: {{ species.name }}</ion-card-header>
+    <ion-card-content>
+      Species classification: {{ species.classification }}
+    </ion-card-content>
+    <ion-card-content>
+      {{ species.designation }}
+    </ion-card-content>
+    
+  </ion-card>
 
+ 
 </ion-content>

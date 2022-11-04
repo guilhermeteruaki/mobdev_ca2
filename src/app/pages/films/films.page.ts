@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+
 @Component({
   selector: 'app-films',
   templateUrl: './films.page.html',
