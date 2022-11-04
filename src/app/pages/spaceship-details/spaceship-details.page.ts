@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./spaceship-details.page.scss'],
 })
 export class SpaceshipDetailsPage implements OnInit {
-
+  
   spaceship: any;
  
   constructor(private activatedRoute: ActivatedRoute, private http: HttpClient) { }

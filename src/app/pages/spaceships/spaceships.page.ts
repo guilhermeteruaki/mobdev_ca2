@@ -23,7 +23,7 @@ export class SpaceshipsPage implements OnInit {
   openDetails(spaceship) {
     let split = spaceship.url.split('/');
     let filmId = split[split.length-2];
-    this.router.navigateByUrl(`/tabs/starships/${filmId}`);
+    this.router.navigateByUrl(`/tabs/spaceships/${filmId}`);
   }
 
 }
